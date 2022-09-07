@@ -10,7 +10,7 @@ import { DashboardComponent } from './Modules/dashboard/dashboard.component';
   declarations: [
     AppComponent,
     LandingPageComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

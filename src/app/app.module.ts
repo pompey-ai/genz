@@ -10,11 +10,15 @@ import { BookService } from './Services/Book Service/BookDetails.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookDataService } from './Services/Book Service/BookDetailsData.service';
+import { LoginComponent } from './Modules/authentication/login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 import { NavbarModule } from './Modules/navbar/navbar.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import { NavbarModule } from './Modules/navbar/navbar.module';
     LandingPageModule,BookModule,
     HttpClientModule, HttpClientInMemoryWebApiModule,
     HttpClientInMemoryWebApiModule.forRoot(BookDataService),
-    ,
+    ,MatFormFieldModule,MatInputModule
+
+  ,
     NavbarModule
   ],
   providers: [BookService],
